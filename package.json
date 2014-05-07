@@ -1,0 +1,42 @@
+{
+  "name": "grunt-ccjs",
+  "description": "grunt plugin for ccjs",
+  "version": "0.0.1",
+  "homepage": "https://github.com/zweifisch/grunt-ccjs",
+  "author": {
+    "name": "zf",
+    "email": "zf.pascal@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/zweifisch/grunt-ccjs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zweifisch/grunt-ccjs/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.4"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.4"
+  },
+  "keywords": [
+    "gruntplugin",
+    "ccjs"
+  ],
+  "dependencies": {
+    "ccjs": "0.0.2",
+    "coffee-script": "^1.7.1"
+  }
+}
