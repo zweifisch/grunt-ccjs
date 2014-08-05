@@ -1,7 +1,7 @@
 {
   "name": "grunt-ccjs",
   "description": "grunt plugin for ccjs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/zweifisch/grunt-ccjs",
   "author": {
     "name": "zf",
@@ -36,7 +36,7 @@
     "ccjs"
   ],
   "dependencies": {
-    "ccjs": "0.0.2",
+    "ccjs": "0.1.0",
     "coffee-script": "^1.7.1"
   }
 }
