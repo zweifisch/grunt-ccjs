@@ -19,13 +19,7 @@ module.exports = (grunt)->
 
 		process = (src, dest)->
 			realpath = stripExt path.join root, src
-			if coffee and grunt.file.exists "#{realpath}.coffee"
-				js = compilers.coffee grunt.file.read "#{realpath}.coffee"
-			else if grunt.file.exists "#{realpath}.js"
-				js = grunt.file.read "#{realpath}.js", encoding: 'utf8'
-			else
-				grunt.log.warn "Source file #{realpath} not found."
-			grunt.file.write dest, ccjs.processFile js, realpath, root, compilers
+			grunt.file.write dest, ccjs.bundle realpath, root, compilers
 			grunt.log.writeln "File #{dest} created."
 
 		process src, dest for dest,src of files

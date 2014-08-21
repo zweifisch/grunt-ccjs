@@ -27,18 +27,9 @@
         };
       }
       process = function(src, dest) {
-        var js, realpath;
+        var realpath;
         realpath = stripExt(path.join(root, src));
-        if (coffee && grunt.file.exists("" + realpath + ".coffee")) {
-          js = compilers.coffee(grunt.file.read("" + realpath + ".coffee"));
-        } else if (grunt.file.exists("" + realpath + ".js")) {
-          js = grunt.file.read("" + realpath + ".js", {
-            encoding: 'utf8'
-          });
-        } else {
-          grunt.log.warn("Source file " + realpath + " not found.");
-        }
-        grunt.file.write(dest, ccjs.processFile(js, realpath, root, compilers));
+        grunt.file.write(dest, ccjs.bundle(realpath, root, compilers));
         return grunt.log.writeln("File " + dest + " created.");
       };
       _results = [];
